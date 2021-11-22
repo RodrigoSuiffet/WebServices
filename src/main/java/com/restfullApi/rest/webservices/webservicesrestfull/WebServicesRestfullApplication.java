@@ -1,4 +1,4 @@
-package com.in28minutes.rest.webservices.webservicesrestfull;
+package com.restfullApi.rest.webservices.webservicesrestfull;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
