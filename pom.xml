@@ -31,7 +31,30 @@
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-actuator</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-hateoas</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.data</groupId>
+			<artifactId>spring-data-rest-hal-explorer</artifactId>
+		</dependency>
+		<!--
+		Para poder elegir entre JSON y XML para nuestros recursos, añadimos la dependencia:
+		<dependency>
+			<groupId>com.fasterxml.jackson.dataformat</groupId>
+			<artifactId>jackson-dataformat-xml</artifactId>
+		</dependency>
+		Luego si recibimos una petición que en su cabecera tenga el parametro:
+		Accept con el valor application/xml, nuestro recurso se enviará como xml en lugar de Json
+		Cuidado, porque no funciona del tdo bien con otras funcionalidades.
+		-->
+		<dependency>
+			<groupId>org.springdoc</groupId>
+			<artifactId>springdoc-openapi-ui</artifactId>
+			<version>1.5.12</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
