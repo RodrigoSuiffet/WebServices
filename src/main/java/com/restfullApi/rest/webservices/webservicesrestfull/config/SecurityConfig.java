@@ -23,8 +23,10 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
         .httpBasic() // it indicate basic authentication is requires
         .and()
         .authorizeRequests()
+        .antMatchers("/login", "/h2-console/**").permitAll()
         .anyRequest().authenticated(); // it's indicate all request will be secure
     http.csrf().disable();
+    http.headers().frameOptions().disable();
   }
 }
 
