@@ -1,14 +1,22 @@
 package com.restfullApi.rest.webservices.webservicesrestfull.user.entity;
 
 import java.util.Date;
+import java.util.List;
 
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.validation.constraints.Past;
 import javax.validation.constraints.Size;
 
+import org.hibernate.annotations.Fetch;
+
+import lombok.Data;
+
 @Entity
+@Data
 public class User {
 
   @Id
@@ -20,6 +28,12 @@ public class User {
 
   @Past
   private Date birthDate;
+
+  @OneToMany(mappedBy="user")
+  private List<Post> posts;
+
+
+
 
   public User() {
 
